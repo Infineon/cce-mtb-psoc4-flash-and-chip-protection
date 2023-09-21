@@ -131,7 +131,7 @@ LINKER_SCRIPT=./linkerscript/custom.ld
 PREBUILD=
 
 # Custom post-build commands to run.
-POSTBUILD+="$(CY_TOOLS_DIR)/cymcuelftool-1.0/bin/cymcuelftool.exe" --sign $(CY_CONFIG_DIR)/$(APPNAME).elf --output $(CY_CONFIG_DIR)/$(APPNAME)_prot.elf --hex $(CY_CONFIG_DIR)/$(APPNAME)_prot.hex
+POSTBUILD+=$(CY_TOOL_cymcuelftool_EXE_ABS) --sign $(CY_CONFIG_DIR)/$(APPNAME).elf --output $(CY_CONFIG_DIR)/$(APPNAME)_prot.elf --hex $(CY_CONFIG_DIR)/$(APPNAME)_prot.hex
 
 
 ################################################################################
